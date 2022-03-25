@@ -1,0 +1,11 @@
+Recently I had done a project regression task where we had to predict the life expectancy of a country . The dataset had nearly 3 lakh enteries .I t contained the data of around all the countries,islands around the world over 15 years period.
+1. The first think that I did was split the data into train and test.  
+2. Find the missing variables in the data
+3. Since Categorcal data didn't contain any missing values I encoded them. Major problem was coming from country column if they were encoded they would have high cardinality andit would spoil the predicting value od my dataset , so I converted it into continent column.
+4. I removed the rows with more tham 4 columns missing out of the 14 columns prsent at that time.
+5. Filled themissing data in each column with the mean of the data for that country
+6. Since there were many outliers in the data so rather than removing them I encoded them to the maximum of 3*(quantile(0.75)-quantile(0.25))+ quantile(0.75) value.It also helped to increase the co-relation of the columns to the final output.
+7. Normalized the cotinuous variables y using various transformation like log,power,yeo-johnson etc.
+8. Then The continues variables that were not normalized I discretized them.
+9. Tested the dataset on the various models so as to find the best MSE eg. Linear Model, Random Forest, Decission Tree, Xgboost .
+10. I also used Randomized search and then Grid Search C to decraese overfitting. 
