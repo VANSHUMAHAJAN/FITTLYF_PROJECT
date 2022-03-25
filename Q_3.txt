@@ -1,0 +1,18 @@
+Factors on which sale of Red Honda SUV depends:
+1.Average Income per capita
+2.Pricing
+3.Sale may vary from region to region , eg. Regions with high temperatues during summers wouldn't want red car as it gets very hot inside
+4. Mileage
+5.Availability of Honda Service centre nearby
+6.Availibility of orignal honda parts
+7.Money spent on advertisement of the model 
+8.Availibility of Smart features in that model
+9.No. of airbags in that car compared to its counterparts
+
+
+The application of which model I should implement depends on size of the data and kind of features that are avilable to me.
+In general if it is a small dataset then I would like to use Linear Regression but provided for better result the features should be normally distributed .
+Or the model that workd best genrally are the tree based models like Random Forest, Xgboost .You can hypertune them to decrease overfitting to a large extent. But these models genrally require a large dataset or they completely overfit the data and lack any predictive value.
+
+
+I would divide the dateset into train and test and a validation set. Clean the data , remove all the outliers or bound them to a maximum value i.e 3 times mean or 3 times median . Then in the final stage I would input train dataset and find its accuracy on the validation set by testing on various available models. If I am satisfied with the best model performence on Validation set then I would perform a run the model then I would run it on the test set.    
